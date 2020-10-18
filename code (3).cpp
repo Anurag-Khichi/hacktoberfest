@@ -9,6 +9,13 @@ char Game(long long v,long long c, char s)
         else
             return 'A';
     }
+     if(c != 0 && v != 0)
+    {
+        if(s == 'A')
+            return 'A';
+        else
+            return 'B';
+    }
     if(c == 0)
         return 'D';
     if(s == 'A')
@@ -26,6 +33,8 @@ char Game(long long v,long long c, char s)
                 return 'A';
         }
         char Second = Game(v,c-1,'B');
+        if(c == 0)
+        return 'D';
         if(First == 'A' || Second == 'A')
             return 'A';
         else
