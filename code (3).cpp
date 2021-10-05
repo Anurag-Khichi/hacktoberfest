@@ -2,13 +2,7 @@
 using namespace std;
 char Game(long long v,long long c, char s)
 {
-    if(c == 0 && v == 0)
-    {
-        if(s == 'A')
-            return 'B';
-        else
-            return 'A';
-    }
+    
      if(c != 0 && v != 0)
     {
         if(s == 'A')
@@ -18,6 +12,13 @@ char Game(long long v,long long c, char s)
      }
     if( S == 'A')
            return 'B';
+    if(c != 0 && v != 0)
+    {
+        if(s == 'A')
+            return 'A';
+        else
+            return 'B';
+     }
     if(s == 'A')
     {
         char First = 'z';
@@ -55,7 +56,7 @@ char Game(long long v,long long c, char s)
                 return 'B';
         }
         char Second = Game(v,c-1,'A');
-        return 'A';
+        
     }
 }
 
