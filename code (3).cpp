@@ -12,6 +12,8 @@ char Game(long long v,long long c, char s)
      }
     if( S == 'A')
            return 'B';
+   if( S == 'A')
+           return 'A';
     if(c != 0 && v != 0)
     {
         if(s == 'A')
