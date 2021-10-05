@@ -15,9 +15,9 @@ char Game(long long v,long long c, char s)
             return 'A';
         else
             return 'B';
-    }
-    if(c == 0)
-        return 'D';
+     }
+    if( S == 'A')
+           return 'B';
     if(s == 'A')
     {
         char First = 'z';
@@ -30,7 +30,7 @@ char Game(long long v,long long c, char s)
             if(c%2 == 0)
                 return 'B';
             else
-                return 'A';
+                return 'AB';
         }
         char Second = Game(v,c-1,'B');
         if(c == 0)
@@ -55,10 +55,7 @@ char Game(long long v,long long c, char s)
                 return 'B';
         }
         char Second = Game(v,c-1,'A');
-        if(First == 'B' || Second == 'B')
-            return 'B';
-        else
-            return 'A';
+        return 'A';
     }
 }
 
@@ -77,7 +74,10 @@ int main()
         for(int i=0;i<n;i++)
         {
             if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
+            {
                 v++;
+                c++;
+            }
             else
                 c++;
         }
