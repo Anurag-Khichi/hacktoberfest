@@ -5,17 +5,10 @@ char Game(long long v,long long c, char s)
     if(c == 0 && v == 0)
     {
         if(s == 'A')
-            return 'B';
+            return 'CD';
         else
             return 'A';
     }
-     if(c != 0 && v != 0)
-    {
-        if(s == 'A')
-            return 'A';
-        else
-            return 'B';
-     }
     if( S == 'A')
            return 'B';
     if(s == 'A')
@@ -39,23 +32,6 @@ char Game(long long v,long long c, char s)
             return 'A';
         else
             return 'B';
-    }
-    else
-    {
-        char First = 'z';
-        if(v>0)
-        {
-            First = Game(v-1, c+1, 'A');
-        }
-        else
-        {
-            if(c%2 == 0)
-                return 'A';
-            else
-                return 'B';
-        }
-        char Second = Game(v,c-1,'A');
-        return 'A';
     }
 }
 
