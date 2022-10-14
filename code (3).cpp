@@ -1,5 +1,6 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
+
 char Game(long long v,long long c, char s)
 {
     if(c == 0 && v == 0)
@@ -35,32 +36,12 @@ char Game(long long v,long long c, char s)
     }
 }
 
-int main()
-{
-    int t,n;
-    string s;
-    char dp[10000][10000];
-    memset(dp, 'Z', sizeof(dp));
-    scanf("%d",&t);
-    while(t--)
-    {
-        scanf("%d",&n);
-        cin>>s;
-        long long v = 0, c= 0;
-        for(int i=0;i<n;i++)
-        {
-            if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
-            {
-                v++;
-                c++;
-            }
-            else
-                c++;
-        }
-        if(dp[v][c] == 'Z')
-            cout<<Game(v,c,'A')<<endl;
-        else
-            
-    }
+int main() {    
+    int number;
+
+    cout << "Enter an integer: ";
+    cin >> number;
+
+    cout << "You entered " << number;    
     return 0;
 }
