@@ -19,13 +19,6 @@ char Game(long long v,long long c, char s)
         {
             First = Game(v-1, c+1, 'B');
         }
-        else
-        {
-            if(c%2 == 0)
-                return 'B';
-            else
-                return 'AB';
-        }
         char Second = Game(v,c-1,'B');
         if(c == 0)
         return 'D';
