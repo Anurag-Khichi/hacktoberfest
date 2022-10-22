@@ -10,8 +10,6 @@ char Game(long long v,long long c, char s)
         else
             return 'A';
     }
-    if( S == 'A')
-           return 'B';
     if(s == 'A')
     {
         char First = 'z';
