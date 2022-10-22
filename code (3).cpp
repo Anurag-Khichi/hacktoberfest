@@ -19,9 +19,10 @@ char Game(long long v,long long c, char s)
         {
             First = Game(v-1, c+1, 'B');
         }
+
+
+
         char Second = Game(v,c-1,'B');
-        if(c == 0)
-        return 'D';
         if(First == 'A' || Second == 'A')
             return 'A';
         else
